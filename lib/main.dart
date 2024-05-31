@@ -81,7 +81,7 @@ class _MyHomePageState extends State<MyHomePage> {
               style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
             ),
             const Padding(
-              padding: EdgeInsets.only(top: 50.0),
+              padding: EdgeInsets.only(top: 10.0),
               child: Center(
                 child: Text(
                   "Code Technologies",
