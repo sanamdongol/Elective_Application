@@ -10,8 +10,15 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text('Hello'),
+    return Scaffold(
+      body: Center(
+        child: ElevatedButton(
+          onPressed: () {
+            print("hello");
+          },
+          child: Text("Show Bottom Sheet"),
+        ),
+      ),
     );
   }
 }
