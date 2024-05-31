@@ -8,6 +8,7 @@ import 'register_page.dart';
 void main() {
   runApp(const MyApp());
 }
+// I am sugam
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -116,15 +117,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 },
               ),
             ),
-            Checkbox(
-              value: isMarked,
-              onChanged: (isChecked) {
-                setState(() {
-                  isMarked = isChecked;
-                });
-                 
-              },
-            ),
+           
             Row(
               children: [
                 Checkbox(
