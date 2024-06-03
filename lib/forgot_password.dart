@@ -44,13 +44,34 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
             ElevatedButton(
               onPressed: () {
                 var result = txtController.text;
-
-              
-
                 print(result);
               },
               child: Text('Reset Password'),
             ),
+            IconButton(
+                onPressed: () {
+                  showDialog(
+                      context: context,
+                      barrierDismissible: false,
+                      builder: (BuildContext builder) {
+                        return AlertDialog(
+                          title: Text('Hello'),
+                          content: Text(
+                              "You forgot password,  seems like your memory is not good."),
+                          actions: [
+                            TextButton(
+                                onPressed: () {
+                                  Navigator.pop(context);
+                                },
+                                child: Text('Close')),
+                            TextButton(
+                                onPressed: () {}, child: Text('Dismiss')),
+                            TextButton(onPressed: () {}, child: Text('OK')),
+                          ],
+                        );
+                      });
+                },
+                icon: Icon(Icons.info)),
           ],
         ),
       ),
