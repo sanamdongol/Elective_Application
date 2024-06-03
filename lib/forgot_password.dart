@@ -8,7 +8,7 @@ class ForgotPasswordPage extends StatefulWidget {
 }
 
 class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
-  TextEditingController controller = new TextEditingController();
+  TextEditingController txtController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -20,33 +20,36 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
           },
           icon: Icon(Icons.arrow_back),
         ),
+        title: Text('Forgot Password'),
+        centerTitle: false,
       ),
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(20.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Text(
               'Forgot Password',
-              style: TextStyle(color: Colors.black, fontSize: 20.0),
+              style: TextStyle(fontSize: 25.0),
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 20.0),
             Text(
-                "Enter the email address with your account and we'll send an email with confirmation to reset your password"),
-            SizedBox(height: 20),
+                'Enter the email address linked with your account to send the reset link'),
+            SizedBox(height: 15.0),
             TextField(
-              controller: controller,
-              decoration: InputDecoration(
-                hintText: 'Enter email address',
-                border: OutlineInputBorder(),
-              ),
+              controller: txtController,
+              decoration: InputDecoration(hintText: 'Enter your email'),
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 15.0),
             ElevatedButton(
               onPressed: () {
-                validatePassword();
+                var result = txtController.text;
+
+              
+
+                print(result);
               },
-              child: Text("Reset Password"),
+              child: Text('Reset Password'),
             ),
           ],
         ),
@@ -54,14 +57,14 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
     );
   }
 
-  void validatePassword() {
-    if (!controller.text.isEmpty) {
-    } else {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Text('Enter email address and try again'),
-        ),
-      );
-    }
-  }
+  // void validatePassword() {
+  //   if (!controller.text.isEmpty) {
+  //   } else {
+  //     ScaffoldMessenger.of(context).showSnackBar(
+  //       SnackBar(
+  //         content: Text('Enter email address and try again'),
+  //       ),
+  //     );
+  //   }
+  // }
 }
