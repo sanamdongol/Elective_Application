@@ -1,3 +1,34 @@
+// import 'package:flutter/material.dart';
+
+// class HomePage extends StatefulWidget {
+//   const HomePage({super.key});
+
+//   @override
+//   State<HomePage> createState() => _HomePageState();
+// }
+
+// class _HomePageState extends State<HomePage> {
+//   @override
+//   Widget build(BuildContext context) {
+//      body: Center(
+//         child: ElevatedButton(
+//           onPressed: () {
+            
+//             print('Hello button pressed');
+//           },
+//           child: Text('Hello'),
+//         ),
+//       );
+    
+
+    
+//     // return Center(
+//     //   child: Text('Hello'),
+//     // );
+//   }
+// }
+
+
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -10,8 +41,18 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Text('Hello'),
+    return Scaffold(
+      appBar: AppBar(
+        // title: Text('Home Page'),
+      ),
+      body: Center(
+        child: ElevatedButton(
+          onPressed: () {
+            print('Hello button pressed');
+          },
+          child: Text('Hello'),
+        ),
+      ),
     );
   }
 }

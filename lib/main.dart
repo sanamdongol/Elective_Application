@@ -8,6 +8,7 @@ import 'register_page.dart';
 void main() {
   runApp(const MyApp());
 }
+//  I am deepa
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -116,15 +117,15 @@ class _MyHomePageState extends State<MyHomePage> {
                 },
               ),
             ),
-            Checkbox(
-              value: isMarked,
-              onChanged: (isChecked) {
-                setState(() {
-                  isMarked = isChecked;
-                });
+            // Checkbox(
+            //   value: isMarked,
+            //   onChanged: (isChecked) {
+            //     setState(() {
+            //       isMarked = isChecked;
+            //     });
                  
-              },
-            ),
+            //   },
+            // ),
             Row(
               children: [
                 Checkbox(
@@ -203,9 +204,9 @@ class _MyHomePageState extends State<MyHomePage> {
               },
               child: Text("Login"),
             ),
-            SizedBox(height: 40),
+            SizedBox(height: 10),
             Center(child: const Text("or")),
-            SizedBox(height: 40),
+            SizedBox(height: 10),
             ElevatedButton.icon(
               onPressed: () {},
               icon: Icon(Icons.house),
