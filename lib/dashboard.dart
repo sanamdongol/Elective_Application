@@ -7,7 +7,8 @@ import 'package:flutter/material.dart';
 import 'notice.dart';
 
 class DashboardPage extends StatefulWidget {
-  const DashboardPage({super.key});
+  final String name;
+  const DashboardPage({super.key, required this.name});
 
   @override
   State<DashboardPage> createState() => _DashboardPageState();
@@ -33,7 +34,7 @@ class _DashboardPageState extends State<DashboardPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Super Store'),
+        title: Text('Hi ${widget.name}'),
       ),
       drawer: Drawer(
         child: ListView(
@@ -51,19 +52,19 @@ class _DashboardPageState extends State<DashboardPage> {
               onTap: () {
                 Navigator.pop(context);
               },
-              leading: Icon(Icons.home_filled),
-              title: Text('Home'),
+              leading: const Icon(Icons.home_filled),
+              title: const Text('Home'),
             ),
-            ListTile(
+            const ListTile(
               title: Text('Terms and Conditions'),
               trailing: Icon(Icons.shield_outlined),
             ),
-            ListTile(
+            const ListTile(
               leading: Icon(Icons.r_mobiledata),
               title: Text('Rate App'),
               trailing: Icon(Icons.r_mobiledata_outlined),
             ),
-            ListTile(
+            const ListTile(
               title: Text('Share App'),
             ),
           ],
@@ -77,23 +78,23 @@ class _DashboardPageState extends State<DashboardPage> {
         items: [
           BottomNavigationBarItem(
             label: 'Home',
-            icon: Icon(Icons.home),
+            icon: const Icon(Icons.home),
             backgroundColor: selectedIndex == 0 ? Colors.red : Colors.white38,
           ),
           BottomNavigationBarItem(
             label: 'News',
-            icon: Icon(Icons.home),
+            icon: const Icon(Icons.home),
             backgroundColor: selectedIndex == 0 ? Colors.red : Colors.white38,
           ),
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
             label: 'Notice',
             icon: Icon(Icons.home),
           ),
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
             label: 'Settings',
             icon: Icon(Icons.home),
           ),
-          BottomNavigationBarItem(
+          const BottomNavigationBarItem(
             label: 'Profile',
             icon: Icon(Icons.home),
           ),

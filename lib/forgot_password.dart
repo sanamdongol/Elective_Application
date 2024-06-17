@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class ForgotPasswordPage extends StatefulWidget {
+  // String name;
+  //const ForgotPasswordPage({ this.name,super.key});
   const ForgotPasswordPage({super.key});
 
   @override
@@ -12,6 +14,8 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
 
   @override
   Widget build(BuildContext context) {
+    final data = ModalRoute.of(context)!.settings.arguments as String;
+
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
@@ -20,7 +24,7 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
           },
           icon: Icon(Icons.arrow_back),
         ),
-        title: Text('Forgot Password'),
+        title: Text(data),
         centerTitle: false,
       ),
       body: Padding(
@@ -29,7 +33,8 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Text(
-              'Forgot Password',
+              // 'Hi ${data}, change your password here',
+              "widget.name",
               style: TextStyle(fontSize: 25.0),
             ),
             SizedBox(height: 20.0),
